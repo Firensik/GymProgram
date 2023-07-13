@@ -4,10 +4,16 @@ import Fimage1 from "../images/Fimage1.png";
 import Fimage2 from "../images/Fimage2.png";
 import Fimage3 from "../images/Fimage3.png";
 import Fimage4 from "../images/Fimage4.png";
+import { motion } from "framer-motion";
 
 const Feature = () => {
   return (
-    <div id="features">
+    <motion.div
+      id="features"
+      intial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <h1>Features</h1>
       <div className="a-container">
         <Featurebox image={Fimage1} title="WeightLifting" />
@@ -15,7 +21,7 @@ const Feature = () => {
         <Featurebox image={Fimage3} title="Flex Yor Muscle" />
         <Featurebox image={Fimage4} title="Cardio Exercise" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

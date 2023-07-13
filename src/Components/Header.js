@@ -1,8 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <div id="main">
+    <motion.div
+      id="main"
+      intial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="name">
         <h2>Never Give Up</h2>
         <h1>
@@ -15,7 +21,7 @@ const Header = () => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

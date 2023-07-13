@@ -1,8 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Offer = () => {
   return (
-    <div id="presentaion">
+    <motion.div
+      id="presentaion"
+      intial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="pr-heading">
         <h1>
           A BIG <span>OFFER</span>FOR THIS SUMMER XD
@@ -19,7 +25,7 @@ const Offer = () => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

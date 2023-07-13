@@ -1,9 +1,15 @@
 import React from "react";
 import aboutimage from "../images/about.png";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div id="about">
+    <motion.div
+      id="about"
+      intial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="about-image">
         <img src={aboutimage} alt="" />
       </div>
@@ -17,7 +23,7 @@ const About = () => {
         </p>
         <button>READ MORE</button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
