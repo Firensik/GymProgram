@@ -5,6 +5,7 @@ import Fimage2 from "../images/Fimage2.png";
 import Fimage3 from "../images/Fimage3.png";
 import Fimage4 from "../images/Fimage4.png";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Feature = () => {
   return (
@@ -16,8 +17,13 @@ const Feature = () => {
     >
       <h1>Features</h1>
       <div className="a-container">
-        <Featurebox image={Fimage1} title="WeightLifting" />
-        <Featurebox image={Fimage2} title="Specific Muscle" />
+        <Link to="/BmiCalculator">
+          <Featurebox image={Fimage1} title="BMI Calclculator" />
+        </Link>
+        <Link to="/PlatsCalculator">
+          <Featurebox image={Fimage2} title="Plates Calculator" />
+        </Link>
+
         <Featurebox image={Fimage3} title="Flex Yor Muscle" />
         <Featurebox image={Fimage4} title="Cardio Exercise" />
       </div>

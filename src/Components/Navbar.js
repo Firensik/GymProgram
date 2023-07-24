@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav className={nav ? "nav active" : "nav"}>
-      <Link to="/Header" className="logo">
+      <Link to="/" className="logo">
         <img src={logo} alt="" />
       </Link>
       <input className="menu-btn" type="checkbox" id="menu-btn" />
@@ -20,6 +20,9 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/Feature">Features</Link>
+        </li>
+        <li>
+          <Link to="/About">About</Link>
         </li>
         <li>
           <Link to="/Offer">Offer</Link>
