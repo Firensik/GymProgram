@@ -77,7 +77,7 @@ const PlatsCalculator = () => {
   };
   let newTotal = total;
 
-  const Mathematic = (e) => {
+  const mathematic = (e) => {
     e.preventDefault();
     const calculatorWeight = (plateWeight, quantity, left) => {
       const plateAmount = 2;
@@ -86,11 +86,9 @@ const PlatsCalculator = () => {
       if (newTotal >= actualWeight && weight[plateWeight].quantity > quantity) {
         results[plateWeight].plates = results[plateWeight].plates + plateAmount;
         newTotal = left - actualWeight;
-        // setResults(results[plateWeight].plates);
+
         setTotal(newTotal);
         setShowTotal(total);
-        console.log(newTotal + " newtotal");
-        console.log(results);
 
         return calculatorWeight(plateWeight, quantity + plateAmount, newTotal);
       }
@@ -189,10 +187,10 @@ const PlatsCalculator = () => {
             />
           </div>
         </div>
-        <button className="Button-cal" onClick={Mathematic}>
+        <button className="button-cal" onClick={mathematic}>
           Calculate
         </button>
-        <button className="Button-clear" onClick={clearInput}>
+        <button className="button-clear" onClick={clearInput}>
           Clear
         </button>
       </form>

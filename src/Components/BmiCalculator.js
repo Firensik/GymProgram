@@ -10,10 +10,7 @@ const BmiCalculator = () => {
   const [activity, setActivity] = useState();
   const [bodyFat, setBodyFat] = useState(20);
   const [calories, setCalories] = useState("");
-  console.log(age);
-  console.log(gender);
-  console.log(height);
-  console.log(weight);
+
   const changeGender = (e) => {
     setGender(e.target.value);
   };
@@ -35,17 +32,17 @@ const BmiCalculator = () => {
     if (bmi === "") {
       alert("Must chose actiivy and BMR formul");
     } else if (bmi === "0") {
-      Mifflin(age, gender, height, weight);
+      mifflin(age, gender, height, weight);
     } else if (bmi === "1") {
-      Harris(age, gender, height, weight);
+      harris(age, gender, height, weight);
     } else if (bmi === "2") {
-      Katch(bodyFat, weight);
+      katch(bodyFat, weight);
     }
     let ret = parseFloat((BMR * activity).toFixed());
     setCalories(ret);
   };
 
-  const Mifflin = (age, gender, height, weight) => {
+  const mifflin = (age, gender, height, weight) => {
     if (gender === "male") {
       BMR = 10 * weight + 6.25 * height - 5 * age + 5;
     } else if (gender === "female") {
@@ -56,7 +53,7 @@ const BmiCalculator = () => {
     return BMR;
   };
 
-  const Harris = (age, gender, height, weight) => {
+  const harris = (age, gender, height, weight) => {
     if (gender === "male") {
       BMR = 13.397 * weight + 4.799 * height - 5.677 * age + 88.362;
     } else if (gender === "female") {
@@ -67,14 +64,11 @@ const BmiCalculator = () => {
     return BMR;
   };
 
-  const Katch = (bodyFat, weight) => {
+  const katch = (bodyFat, weight) => {
     BMR = 370 + 21.6 * (1 - bodyFat / 100) * weight;
     return BMR;
   };
 
-  // console.log(activity);
-  // console.log(bmi + "hmn?");
-  console.log(calories);
   return (
     <motion.div
       className="Bmi"

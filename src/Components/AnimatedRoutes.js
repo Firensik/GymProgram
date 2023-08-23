@@ -6,6 +6,8 @@ import About from "./About";
 import Contact from "./Contact";
 import BmiCalculator from "./BmiCalculator";
 import PlatsCalculator from "./PlatsCalculator";
+import WeekPlan from "./WeekPlan";
+import CreatePlan from "./Plans/CreatePlan";
 import { Route, Routes, useLocation } from "react-router-dom";
 
 import { AnimatePresence } from "framer-motion";
@@ -20,8 +22,10 @@ const AnimatedRoutes = () => {
         <Route path="/offer" element={<Offer />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/BmiCalculator" element={<BmiCalculator />} />
-        <Route path="/PlatsCalculator" element={<PlatsCalculator />} />
+        <Route path="/Feature/BmiCalculator" element={<BmiCalculator />} />
+        <Route path="/Feature/PlatsCalculator" element={<PlatsCalculator />} />
+        <Route path="/Feature/WeekPlan" element={<WeekPlan />} />
+        <Route path="/Feature/WeekPlan/CreatePlan" element={<CreatePlan />} />
       </Routes>
     </AnimatePresence>
   );

@@ -17,14 +17,17 @@ const Feature = () => {
     >
       <h1>Features</h1>
       <div className="a-container">
-        <Link to="/BmiCalculator">
+        <Link to="/feature/BmiCalculator">
           <Featurebox image={Fimage1} title="BMI Calclculator" />
         </Link>
-        <Link to="/PlatsCalculator">
+        <Link to="/Feature/PlatsCalculator">
           <Featurebox image={Fimage2} title="Plates Calculator" />
         </Link>
 
-        <Featurebox image={Fimage3} title="Flex Yor Muscle" />
+        <Link to="/Feature/WeekPlan">
+          <Featurebox image={Fimage3} title="Week Plan" />
+        </Link>
+
         <Featurebox image={Fimage4} title="Cardio Exercise" />
       </div>
     </motion.div>

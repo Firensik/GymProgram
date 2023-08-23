@@ -94,6 +94,53 @@ label {
 .score span {
   color: #00f300;
 }
+.button-cal {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+.button-clear {
+  font-size: 1rem;
+}
+.plans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-form {
+  margin-top: 50px;
+  font-size: 10rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+.create-plan-form {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./images/wallpaper.jpg");
+  z-index: 0;
+}
+.container-createPlan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  font-size: 20px;
+  z-index: 1;
+}
+
+#wallpaper {
+  width: 100%;
+  height: 100vh;
+  padding: 30px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./images/wallpaper.jpg");
+  z-index: 0;
+}
 
 #main {
   width: 100%;
